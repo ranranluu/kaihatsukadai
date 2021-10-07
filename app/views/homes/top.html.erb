@@ -1,8 +1,12 @@
 <div class="container">
   <div class="row">
     <div class="mx-auto text-center">
-      <h3>Welcome ShareDairy!!</h3>
-      
+      <h1>Welcome ShareDairy!!</h1>
+      <h3>Share your diary with others on this site.</h3>
+      <div class="col-6 mx-auto mt-5">
+        <%= link_to "Log in", new_user_session_path, class: "btn btn-primary btn-block" %><br>
+        <%= link_to "Sign up", new_user_registration_path, class: "btn btn-success btn-block" %>
+      </div>
     </div>
   </div>
 </div>
