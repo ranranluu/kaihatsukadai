@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="mx-auto text-center">
+      <h1 class="mb-3"><%= @post.user.name %>'s Diary Edit</h1>
+      <%= form_with model: @post, local:true do |f| %>
+        <div class="form-group">
+          <%= f.label :Title %>
+          <%= f.text_field :title, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :Content %>
+          <%= f.text_area :content, class: "form-control" %>
+        </div>
+        <div class="form-group text-center">
+          <%= f.submit "Update Your Diary", class: "btn btn-success" %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>

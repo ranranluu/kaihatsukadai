@@ -1,0 +1,46 @@
+<div class="container mb-5">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-4">
+    <a class="navbar-brand ml-3">
+      <strong><i class="fas fa-book"></i> ShareDiary <i class="fas fa-book"></i></strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+      <% if user_signed_in? %>
+        <li class="nav-link text-light">
+          <strong>Welcome, <%= current_user.name %> !</strong>
+        </li>
+        <li>
+          <%= link_to user_path(current_user.id), class: 'nav-link text-light' do %>
+            <i class="far fa-user-circle"></i>Mypage
+          <% end %>
+        </li>
+        <li>
+          <%= link_to posts_path, class: 'nav-link text-light' do %>
+            <i class="fas fa-comment-alt"></i>Diaries
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_post_path, class: 'nav-link text-light' do %>
+            <i class="fas fa-comment-medical"></i>New Diary
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
+            <i class="fas fa-sign-out-alt"></i>Logout
+          <% end %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to user_session_path, class: 'nav-link text-light' do %>
+            <i class="fas fa-sign-in-alt"></i>Login
+          <% end %>
+        </li>
+        <li><%= link_to 'Signup', new_user_registration_path, class: 'nav-link text-light' %></li>
+      <% end %>
+      </ul>
+    </div>
+  </nav>
+</div>
