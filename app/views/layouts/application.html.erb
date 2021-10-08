@@ -10,9 +10,14 @@
   </head>
 
   <body>
-    <%= render 'layouts/header' %>
-    <main class= "col-8 offset-2">
-      <%= yield %>
-    </main>
+    <div class="container-fluid">
+      <div class="row">
+        <main class="col-xs-12 col-sm-10 col-md-8 offset-sm-1 offset-md-2 mx-auto">
+          <%= render 'layouts/header' %>
+          <p class="notice"><%= notice %></p>
+          <%= yield %>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

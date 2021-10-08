@@ -21,10 +21,12 @@
       <table class="table table-striped text-dark text-center">
         <thead>
           <th>Poster</th>
-          <th>Diary Title</th>
+          <th class="d-none d-sm-table-cell">Diary Title</th>
           <th>Diary Content</th>
-          <th>created_at</th>
-          <th colspan="2"></th>
+          <th class="d-none d-md-table-cell">created_at</th>
+          <% if @user == current_user %>
+            <th colspan="2"></th>
+          <% end %>
         </thead>
         <tbody>
           <% @posts.each do |post| %>
