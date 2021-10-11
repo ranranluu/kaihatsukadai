@@ -1,10 +1,12 @@
+<!--投稿内容等の部分テンプレート-->
 <tbody>
   <% posts.each do |post| %>
     <tr>
+      <!--レスポンシブ対応でタイトルは画面サイズがsm以上、投稿日時はmd以上で表示できるように-->
       <td class="align-middle">
         <%= link_to post.user.name, user_path(post.user) %>
       </td>
-      <td class="align-middle d-none d-sm-table-cell">
+      <td class="d-none d-sm-table-cell　align-middle">
         <%= post.title %>
       </td>
       <td class="align-middle">
@@ -13,6 +15,7 @@
       <td class="d-none d-md-table-cell align-middle">
         <%= post.created_at.strftime("%Y-%m-%d %H:%M") %>
       </td>
+      <!--投稿したユーザーであればその投稿の右に編集ボタンと削除ボタンが表示されるように-->
       <% if post.user == current_user %>
       <td class="align-middle">
         <%= link_to "Dairy Edit", edit_post_path(post), class: "btn btn-primary" %>
