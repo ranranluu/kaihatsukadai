@@ -3,15 +3,18 @@
     <div class="mx-auto text-center">
       <table class="table table-striped text-dark">
         <thead>
+          <!--レスポンシブ対応でタイトルは画面サイズがsm以上、投稿日時はmd以上で表示できるように-->
           <th>Poster</th>
           <th class="d-none d-sm-table-cell">Diary Title</th>
           <th>Diary Content</th>
           <th class="d-none d-md-table-cell">created_at</th>
           <th colspan="2"></th>
         </thead>
+        <!--部分テンプレート使用-->
         <%= render partial: 'posts/list', locals: {posts: @posts} %>
       </table>
       <div class="pagination justify-content-center">
+        <!--kaminari使用でページに表示する件数を限定する-->
         <%= paginate @posts %>
       </div>
 
