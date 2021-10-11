@@ -2,6 +2,7 @@
   <div class="row">
     <div class="mx-auto text-center">
       <h1 class="mb-3"><%= @post.user.name %>'s Diary Edit</h1>
+      <%= render 'layouts/error', model: @post %>
       <%= form_with model: @post, local:true do |f| %>
         <div class="form-group">
           <%= f.label :Title %>
