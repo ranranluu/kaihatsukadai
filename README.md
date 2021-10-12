@@ -1,24 +1,15 @@
-# README
+# ShareDairy
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+簡単に日記を共有できるサイト。
 
-Things you may want to cover:
+## サイト作りで重視した点
+- シンプルなサイト作りをするため、CRUD処理をメインに使用する
+- 不特定多数のユーザーが使用できるよう、BootStrapを用いてレスポンシブ対応する
+- kaminariを用いて1ページに表示する件数を限定する
+- 第三者が変更を加えることを想定し、コメントを多く記載しリーダブルコードを心掛ける
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- 言語：HTML,CSS,Ruby
+- フレームワーク：Ruby on Rails
+- IDE：Cloud9
