@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="mx-auto text-center">
+      <h1 class="mb-5">All Diaries</h1>
       <table class="table table-striped text-dark">
         <thead>
           <!--レスポンシブ対応でタイトルは画面サイズがsm以上、投稿日時はmd以上で表示できるように-->
@@ -13,7 +14,7 @@
         <!--部分テンプレート使用-->
         <%= render partial: 'posts/list', locals: {posts: @posts} %>
       </table>
-      <div class="pagination justify-content-center">
+      <div class="pagination justify-content-center mb-5">
         <!--kaminari使用でページに表示する件数を限定する-->
         <%= paginate @posts %>
       </div>
